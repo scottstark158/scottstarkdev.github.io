@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Evan Stark Media </title>
+      <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <header>
+      <div class="container" style="display:flex; align-items:center; justify-content:space-between;">
+        <div class="brand">Your Name</div>
+        <nav aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact" class="button">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="container">
+      <section class="hero" aria-label="Intro">
+        <div class="avatar" aria-hidden="true"></div>
+        <div>
+          <h1>Evan Stark Media</h1>
+          <p>photo/video/social based in Tallahassee. let's create cool stuff!</p>
+        </div>
+      </section>
+
+      <section id="about" aria-labelledby="about-title">
+        <h2 id="about-title"> <a href="about.html">About </a></h2>
+        <p class="muted">
+          A well-rounded and open-minded marketing professional with a concentration in sports. 
+          Knowledgeable in various creative software platforms, project management tactics and navigating fast-paced environments
+        </p>
+      </section>
+
+    <!-- Featured Projects -->
+  <section id="projects">
+    <h2>Photography Projects</h2>
+    <div class="gallery">
+      <figure>
+        <img src="images/band.JPG" alt="Photo of Band" width="750" height="auto-fit">
+        <figcaption>Band Photography</figcaption>
+      </figure>
+      <figure>
+        <img src="images/grad.JPG" alt="Graduate with champane" width="750" height="auto-fit">
+        <figcaption>Graduation Photos</figcaption>
+      </figure>
+      <figure>
+        <img src="images/soccer.JPG" alt="Photo of soccer player kicking ball" width="750" height="auto-fit">
+        <figcaption>Sports Photography</figcaption>
+      </figure>
+    </div>
+  </section>
+          <article class="card">
+            <img src="images/soccer.JPG"alt="Girl kicking soccer ball" />
+            <div class="content">
+              <h3>Graduation Photos</h3>
+              <p class="muted">3+ Years exprience shooting sports</p>
+              <div class="tags">Football, Basketball, Soccer, Softball</div>
+              <div class="actions">
+                <a class="btn primary" href="#" target="_blank" rel="noopener">Case Study</a>
+                <a class="btn" href="#" target="_blank" rel="noopener">Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/grad.JPG"alt="Man with champange popping in graduation gear" />
+            <div class="content">
+              <h3>Graduation Photos</h3>
+              <p class="muted">Grad photos for any occassion!</p>
+              <div class="tags">FSU, UF</div>
+              <div class="actions">
+                <a class="btn primary" href="#" target="_blank" rel="noopener">Case Study</a>
+                <a class="btn" href="#" target="_blank" rel="noopener">Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/band.jpg" alt="Screenshot of Project Three" height="250" width="auto" />
+            <div class="content">
+              <h3>Band Photography </h3>
+              <p class="muted">All kinds of genres, all kinds of sizes</p>
+              <div class="tags">Local Venues, Arenas</div>
+              <div class="actions">
+                <a class="btn primary" href="#" target="_blank" rel="noopener">Overview</a>
+                <a class="btn" href="#" target="_blank" rel="noopener">Source</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" aria-labelledby="skills-title">
+        <h2 id="skills-title">Skills</h2>
+        <div class="chips">
+          <span class="chip">Sports Photography</span>
+          <span class="chip">Video</span>
+          <span class="chip">Wedding Photography</span>
+          <span class="chip">Social Media Content Creation</span>
+          <span class="chip">Adobe Photoshop</span>
+          <span class="chip">Media Digitization</span>
+        
+        </div>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <p>
+          Email: <a href="mailto:you@example.com">you@example.com</a><br />
+          Links: <a href="#" target="_blank" rel="noopener">GitHub</a>, <a href="#" target="_blank" rel="noopener">LinkedIn</a>, <a href="#" target="_blank" rel="noopener">Twitter</a>
+        </p>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-title">
+  <h2 id="contact-title">Contact</h2>
+  <div class="muted">
+    <p>Please use the form below to submit an inquiry.</p>
+  </div>
+ <form id="inquiry-form" action="http://192.168.0.20:5000/submit-inquiry" method="POST">
+  <div class="form-group">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required /> <!-- 'name' attribute matches request.form['name'] -->
+  </div>
+  <div class="form-group">
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" required /> <!-- 'name' attribute matches request.form['email'] -->
+  </div>
+  <div class="form-group">
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" required></textarea> <!-- 'name' attribute matches request.form['message'] -->
+  </div>
+  <button type="submit" class="btn primary">Send Message</button>
+</form>
+
+</section>
+
+
+
+    </main>
+
+    <footer>
+      <div class="container">
+        © <span id="year"></span> Your Name. All rights reserved.
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
+

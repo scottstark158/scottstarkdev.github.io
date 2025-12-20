@@ -1,0 +1,11 @@
+Create a full HTML page for an image gallery titled "[YOUR TITLE HERE]". 
+Use the same layout, styling, GLightbox integration, and lazy-loading approach 
+as the wedding gallery you previously generated.
+
+Here is the list of image filenames to include (sort them in ascending order 
+and distribute them evenly across 4 columns):
+
+[PASTE FILENAMES HERE]
+
+Wrap each image in a GLightbox link, include lazy loading on all <img> tags, 
+and generate the complete HTML page with all CSS, JS, and markup included.
