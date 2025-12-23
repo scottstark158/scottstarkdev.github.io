@@ -1,159 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Evan Stark Media </title>
-      <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <a href="#main" class="skip-link">Skip to content</a>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Graduation Photos - Evan Stark Media</title>
+  
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- GLightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+  
+  <style>
+    /* Gallery-specific masonry layout */
+    .gallery {
+      column-count: 4;
+      column-gap: 18px;
+      padding: 25px;
+    }
+    
+    .gallery a {
+      break-inside: avoid;
+      display: block;
+      margin-bottom: 18px;
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-sm);
+    }
+    
+    .gallery img {
+      width: 100%;
+      display: block;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-soft);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .gallery a:hover img {
+      transform: scale(1.03);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    /* Responsive adjustments */
+    @media screen and (max-width: 1200px) {
+      .gallery { column-count: 3; }
+    }
+    
+    @media screen and (max-width: 800px) {
+      .gallery { column-count: 2; }
+    }
+    
+    @media screen and (max-width: 500px) {
+      .gallery { column-count: 1; }
+    }
+  </style>
+</head>
+<body>
 
-    <header>
-      <div class="container" style="display:flex; align-items:center; justify-content:space-between;">
-        <div class="brand">Your Name</div>
-        <nav aria-label="Primary">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact" class="button">Contact</a>
-        </nav>
+
+<!-- Global Navigation Bar -->
+<nav class="topnav">
+  <div class="nav-left">
+    <a href="index.html">
+      <img src="images/logo.png" alt="Evan Stark Media Logo" class="logo">
+    </a>
+  </div>
+  <div class="nav-right">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">Galleries ▾</button>
+      <div class="dropdown-content">
+        <a href="wedding photos.html">Wedding Photos</a>
+        <a href="grad photos.html">Graduation Photos</a>
+        <a href="band.html">Band Photography</a>
+        <a href="sports photography.html">Sports Photography</a>
       </div>
-    </header>
-
-    <main id="main" class="container">
-      <section class="hero" aria-label="Intro">
-        <div class="avatar" aria-hidden="true"></div>
-        <div>
-          <h1>Evan Stark Media</h1>
-          <p>photo/video/social based in Tallahassee. let's create cool stuff!</p>
-        </div>
-      </section>
-
-      <section id="about" aria-labelledby="about-title">
-        <h2 id="about-title"> <a href="about.html">About </a></h2>
-        <p class="muted">
-          A well-rounded and open-minded marketing professional with a concentration in sports. 
-          Knowledgeable in various creative software platforms, project management tactics and navigating fast-paced environments
-        </p>
-      </section>
-
-    <!-- Featured Projects -->
-  <section id="projects">
-    <h2>Photography Projects</h2>
-    <div class="gallery">
-      <figure>
-        <img src="images/band.JPG" alt="Photo of Band" width="750" height="auto-fit">
-        <figcaption>Band Photography</figcaption>
-      </figure>
-      <figure>
-        <img src="images/grad.JPG" alt="Graduate with champane" width="750" height="auto-fit">
-        <figcaption>Graduation Photos</figcaption>
-      </figure>
-      <figure>
-        <img src="images/soccer.JPG" alt="Photo of soccer player kicking ball" width="750" height="auto-fit">
-        <figcaption>Sports Photography</figcaption>
-      </figure>
     </div>
+    <a href="about.html">About</a>
+  </div>
+</nav>
+
+<main id="main" class="content">
+  <!-- Page Header -->
+  <section class="hero" aria-label="Gallery Header">
+    <h1>Graduation Photos</h1>
+    <p class="subtitle">Celebrating achievements and new beginnings</p>
   </section>
-          <article class="card">
-            <img src="images/soccer.JPG"alt="Girl kicking soccer ball" />
-            <div class="content">
-              <h3>Graduation Photos</h3>
-              <p class="muted">3+ Years exprience shooting sports</p>
-              <div class="tags">Football, Basketball, Soccer, Softball</div>
-              <div class="actions">
-                <a class="btn primary" href="#" target="_blank" rel="noopener">Case Study</a>
-                <a class="btn" href="#" target="_blank" rel="noopener">Source</a>
-              </div>
-            </div>
-          </article>
 
-          <article class="card">
-            <img src="images/grad.JPG"alt="Man with champange popping in graduation gear" />
-            <div class="content">
-              <h3>Graduation Photos</h3>
-              <p class="muted">Grad photos for any occassion!</p>
-              <div class="tags">FSU, UF</div>
-              <div class="actions">
-                <a class="btn primary" href="#" target="_blank" rel="noopener">Case Study</a>
-                <a class="btn" href="#" target="_blank" rel="noopener">Source</a>
-              </div>
-            </div>
-          </article>
+  <!-- Masonry Gallery -->
+  <section class="gallery" aria-label="Graduation Photo Gallery">
+    <!-- Image 1 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-62.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-62.jpg" alt="Graduation photo 62" loading="lazy">
+    </a>
+    
+    <!-- Image 2 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-63.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-63.jpg" alt="Graduation photo 63" loading="lazy">
+    </a>
+    
+    <!-- Image 3 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-64.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-64.jpg" alt="Graduation photo 64" loading="lazy">
+    </a>
+    
+    <!-- Image 4 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-65.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-65.jpg" alt="Graduation photo 65" loading="lazy">
+    </a>
+    
+    <!-- Image 5 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-66.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-66.jpg" alt="Graduation photo 66" loading="lazy">
+    </a>
+    
+    <!-- Image 6 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-67.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-67.jpg" alt="Graduation photo 67" loading="lazy">
+    </a>
+    
+    <!-- Image 7 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-68.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-68.jpg" alt="Graduation photo 68" loading="lazy">
+    </a>
+    
+    <!-- Image 8 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-69.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-69.jpg" alt="Graduation photo 69" loading="lazy">
+    </a>
+    
+    <!-- Image 9 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-70.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-70.jpg" alt="Graduation photo 70" loading="lazy">
+    </a>
+    
+    <!-- Image 10 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-71.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-71.jpg" alt="Graduation photo 71" loading="lazy">
+    </a>
+    
+    <!-- Image 11 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-72.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-72.jpg" alt="Graduation photo 72" loading="lazy">
+    </a>
+    
+    <!-- Image 12 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-73.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-73.jpg" alt="Graduation photo 73" loading="lazy">
+    </a>
+    
+    <!-- Image 13 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-75.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-75.jpg" alt="Graduation photo 75" loading="lazy">
+    </a>
+    
+    <!-- Image 14 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-76.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-76.jpg" alt="Graduation photo 76" loading="lazy">
+    </a>
+    
+    <!-- Image 15 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-77.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-77.jpg" alt="Graduation photo 77" loading="lazy">
+    </a>
+    
+    <!-- Image 16 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-78.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-78.jpg" alt="Graduation photo 78" loading="lazy">
+    </a>
+    
+    <!-- Image 17 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-87.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-87.jpg" alt="Graduation photo 87" loading="lazy">
+    </a>
+    
+    <!-- Image 18 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-88.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-88.jpg" alt="Graduation photo 88" loading="lazy">
+    </a>
+    
+    <!-- Image 19 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-89.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-89.jpg" alt="Graduation photo 89" loading="lazy">
+    </a>
+    
+    <!-- Image 20 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-90.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-90.jpg" alt="Graduation photo 90" loading="lazy">
+    </a>
+    
+    <!-- Image 21 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-91.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-91.jpg" alt="Graduation photo 91" loading="lazy">
+    </a>
+    
+    <!-- Image 22 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-92.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-92.jpg" alt="Graduation photo 92" loading="lazy">
+    </a>
+    
+    <!-- Image 23 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-93.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-93.jpg" alt="Graduation photo 93" loading="lazy">
+    </a>
+    
+    <!-- Image 24 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-94.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-94.jpg" alt="Graduation photo 94" loading="lazy">
+    </a>
+    
+    <!-- Image 25 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-122.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-122.jpg" alt="Graduation photo 122" loading="lazy">
+    </a>
+    
+    <!-- Image 26 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-123.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-123.jpg" alt="Graduation photo 123" loading="lazy">
+    </a>
+    
+    <!-- Image 27 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-124.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-124.jpg" alt="Graduation photo 124" loading="lazy">
+    </a>
+    
+    <!-- Image 28 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-125.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-125.jpg" alt="Graduation photo 125" loading="lazy">
+    </a>
+    
+    <!-- Image 29 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-126.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-126.jpg" alt="Graduation photo 126" loading="lazy">
+    </a>
+    
+    <!-- Image 30 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-127.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-127.jpg" alt="Graduation photo 127" loading="lazy">
+    </a>
+    
+    <!-- Image 31 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-128.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-128.jpg" alt="Graduation photo 128" loading="lazy">
+    </a>
+    
+    <!-- Image 32 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-129.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-129.jpg" alt="Graduation photo 129" loading="lazy">
+    </a>
+    
+    <!-- Image 33 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-130.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-130.jpg" alt="Graduation photo 130" loading="lazy">
+    </a>
+    
+    <!-- Image 34 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-131.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-131.jpg" alt="Graduation photo 131" loading="lazy">
+    </a>
+    
+    <!-- Image 35 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-132.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-132.jpg" alt="Graduation photo 132" loading="lazy">
+    </a>
+    
+    <!-- Image 36 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-133.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-133.jpg" alt="Graduation photo 133" loading="lazy">
+    </a>
+    
+    <!-- Image 37 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-134.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-134.jpg" alt="Graduation photo 134" loading="lazy">
+    </a>
+    
+    <!-- Image 38 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-135.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-135.jpg" alt="Graduation photo 135" loading="lazy">
+    </a>
+    
+    <!-- Image 39 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-136.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-136.jpg" alt="Graduation photo 136" loading="lazy">
+    </a>
+    
+    <!-- Image 40 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-138.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-138.jpg" alt="Graduation photo 138" loading="lazy">
+    </a>
+    
+    <!-- Image 41 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-139.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-139.jpg" alt="Graduation photo 139" loading="lazy">
+    </a>
+    
+    <!-- Image 42 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-140.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-140.jpg" alt="Graduation photo 140" loading="lazy">
+    </a>
+    
+    <!-- Image 43 -->
+    <a href="images/grad/Scott and Nelly Grad Pics-141.jpg" class="glightbox" data-gallery="graduation">
+      <img src="images/grad/Scott and Nelly Grad Pics-141.jpg" alt="Graduation photo 141" loading="lazy">
+    </a>
+  </section>
+</main>
 
-          <article class="card">
-            <img src="images/band.jpg" alt="Screenshot of Project Three" height="250" width="auto" />
-            <div class="content">
-              <h3>Band Photography </h3>
-              <p class="muted">All kinds of genres, all kinds of sizes</p>
-              <div class="tags">Local Venues, Arenas</div>
-              <div class="actions">
-                <a class="btn primary" href="#" target="_blank" rel="noopener">Overview</a>
-                <a class="btn" href="#" target="_blank" rel="noopener">Source</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="skills" aria-labelledby="skills-title">
-        <h2 id="skills-title">Skills</h2>
-        <div class="chips">
-          <span class="chip">Sports Photography</span>
-          <span class="chip">Video</span>
-          <span class="chip">Wedding Photography</span>
-          <span class="chip">Social Media Content Creation</span>
-          <span class="chip">Adobe Photoshop</span>
-          <span class="chip">Media Digitization</span>
-        
-        </div>
-      </section>
-
-      <section id="contact" aria-labelledby="contact-title">
-        <h2 id="contact-title">Contact</h2>
-        <p>
-          Email: <a href="mailto:you@example.com">you@example.com</a><br />
-          Links: <a href="#" target="_blank" rel="noopener">GitHub</a>, <a href="#" target="_blank" rel="noopener">LinkedIn</a>, <a href="#" target="_blank" rel="noopener">Twitter</a>
-        </p>
-      </section>
-
-      <section id="contact" aria-labelledby="contact-title">
-  <h2 id="contact-title">Contact</h2>
-  <div class="muted">
-    <p>Please use the form below to submit an inquiry.</p>
+<footer>
+  <div class="container">
+    © <span id="year"></span> Evan Stark Media. All rights reserved.
   </div>
- <form id="inquiry-form" action="http://192.168.0.20:5000/submit-inquiry" method="POST">
-  <div class="form-group">
-    <label for="name">Your Name</label>
-    <input type="text" id="name" name="name" required /> <!-- 'name' attribute matches request.form['name'] -->
-  </div>
-  <div class="form-group">
-    <label for="email">Your Email</label>
-    <input type="email" id="email" name="email" required /> <!-- 'name' attribute matches request.form['email'] -->
-  </div>
-  <div class="form-group">
-    <label for="message">Your Message</label>
-    <textarea id="message" name="message" required></textarea> <!-- 'name' attribute matches request.form['message'] -->
-  </div>
-  <button type="submit" class="btn primary">Send Message</button>
-</form>
+</footer>
 
-</section>
+<!-- GLightbox JS -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
+<script>
+  // Initialize GLightbox
+  const lightbox = GLightbox({
+    touchNavigation: true,
+    loop: true,
+    autoplayVideos: true
+  });
 
-
-    </main>
-
-    <footer>
-      <div class="container">
-        © <span id="year"></span> Your Name. All rights reserved.
-      </div>
-    </footer>
-
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-  </body>
+  // Update year in footer
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
 </html>
-

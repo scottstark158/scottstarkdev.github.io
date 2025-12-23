@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Band Photography - Evan Stark Media</title>
+  
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- GLightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+  
+  <style>
+    /* Gallery-specific masonry layout */
+    .gallery {
+      column-count: 4;
+      column-gap: 18px;
+      padding: 25px;
+    }
+    
+    .gallery a {
+      break-inside: avoid;
+      display: block;
+      margin-bottom: 18px;
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-sm);
+    }
+    
+    .gallery img {
+      width: 100%;
+      display: block;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-soft);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .gallery a:hover img {
+      transform: scale(1.03);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    /* Responsive adjustments */
+    @media screen and (max-width: 1200px) {
+      .gallery { column-count: 3; }
+    }
+    
+    @media screen and (max-width: 800px) {
+      .gallery { column-count: 2; }
+    }
+    
+    @media screen and (max-width: 500px) {
+      .gallery { column-count: 1; }
+    }
+  </style>
+</head>
+<body>
+
+
+<!-- Global Navigation Bar -->
+<nav class="topnav">
+  <div class="nav-left">
+    <a href="index.html">
+      <img src="images/logo.png" alt="Evan Stark Media Logo" class="logo">
+    </a>
+  </div>
+  <div class="nav-right">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">Galleries ▾</button>
+      <div class="dropdown-content">
+        <a href="wedding photos.html">Wedding Photos</a>
+        <a href="grad photos.html">Graduation Photos</a>
+        <a href="band.html">Band Photography</a>
+        <a href="sports photography.html">Sports Photography</a>
+      </div>
+    </div>
+    <a href="about.html">About</a>
+  </div>
+</nav>
+
+<main id="main" class="content">
+  <!-- Page Header -->
+  <section class="hero" aria-label="Gallery Header">
+    <h1>Band Photography</h1>
+    <p class="subtitle">Capturing the energy and soul of live performances</p>
+  </section>
+
+  <!-- Masonry Gallery -->
+  <section class="gallery" aria-label="Band Photography Gallery">
+    <!-- Image 1 -->
+    <a href="images/band/IMG_8388.jpg" class="glightbox" data-gallery="band">
+      <img src="images/band/IMG_8388.jpg" alt="Band performance photo 8388" loading="lazy">
+    </a>
+    
+    <!-- Image 2 -->
+    <a href="images/band/IMG_8389.jpg" class="glightbox" data-gallery="band">
+      <img src="images/band/IMG_8389.jpg" alt="Band performance photo 8389" loading="lazy">
+    </a>
+    
+    <!-- Image 3 -->
+    <a href="images/band/IMG_8392.jpg" class="glightbox" data-gallery="band">
+      <img src="images/band/IMG_8392.jpg" alt="Band performance photo 8392" loading="lazy">
+    </a>
+    
+    <!-- Image 4 -->
+    <a href="images/band/IMG_8395.jpg" class="glightbox" data-gallery="band">
+      <img src="images/band/IMG_8395.jpg" alt="Band performance photo 8395" loading="lazy">
+    </a>
+    
+    <!-- Image 5 -->
+    <a href="images/band/IMG_8396.jpg" class="glightbox" data-gallery="band">
+      <img src="images/band/IMG_8396.jpg" alt="Band performance photo 8396" loading="lazy">
+    </a>
+    
+    <!-- Image 6 -->
+    <a href="images/band/IMG_8397.jpg" class="glightbox" data-gallery="band">
+      <img src="images/band/IMG_8397.jpg" alt="Band performance photo 8397" loading="lazy">
+    </a>
+    
+    <!-- Image 7 -->
+    <a href="images/band/IMG_8398.jpg" class="glightbox" data-gallery="band">
+      <img src="images/band/IMG_8398.jpg" alt="Band performance photo 8398" loading="lazy">
+    </a>
+    
+    <!-- Image 8 -->
+    <a href="images/band/IMG_8399.jpg" class="glightbox" data-gallery="band">
+      <img src="images/band/IMG_8399.jpg" alt="Band performance photo 8399" loading="lazy">
+    </a>
+    
+    <!-- Image 9 -->
+    <a href="images/band/IMG_8400.jpg" class="glightbox" data-gallery="band">
+      <img src="images/band/IMG_8400.jpg" alt="Band performance photo 8400" loading="lazy">
+    </a>
+    
+    <!-- Image 10 -->
+    <a href="images/band/IMG_8401.jpg" class="glightbox" data-gallery="band">
+      <img src="images/band/IMG_8401.jpg" alt="Band performance photo 8401" loading="lazy">
+    </a>
+    
+    <!-- Image 11 -->
+    <a href="images/band/IMG_8402.jpg" class="glightbox" data-gallery="band">
+      <img src="images/band/IMG_8402.jpg" alt="Band performance photo 8402" loading="lazy">
+    </a>
+    
+    <!-- Image 12 -->
+    <a href="images/band/IMG_8403.jpg" class="glightbox" data-gallery="band">
+      <img src="images/band/IMG_8403.jpg" alt="Band performance photo 8403" loading="lazy">
+    </a>
+    
+    <!-- Image 13 -->
+    <a href="images/band/IMG_8404.jpg" class="glightbox" data-gallery="band">
+      <img src="images/band/IMG_8404.jpg" alt="Band performance photo 8404" loading="lazy">
+    </a>
+    
+    <!-- Image 14 -->
+    <a href="images/band/IMG_8405.jpg" class="glightbox" data-gallery="band">
+      <img src="images/band/IMG_8405.jpg" alt="Band performance photo 8405" loading="lazy">
+    </a>
+    
+    <!-- Image 15 -->
+    <a href="images/band/IMG_8406.jpg" class="glightbox" data-gallery="band">
+      <img src="images/band/IMG_8406.jpg" alt="Band performance photo 8406" loading="lazy">
+    </a>
+    
+    <!-- Image 16 -->
+    <a href="images/band/IMG_8407.jpg" class="glightbox" data-gallery="band">
+      <img src="images/band/IMG_8407.jpg" alt="Band performance photo 8407" loading="lazy">
+    </a>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    © <span id="year"></span> Evan Stark Media. All rights reserved.
+  </div>
+</footer>
+
+<!-- GLightbox JS -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+<script>
+  // Initialize GLightbox
+  const lightbox = GLightbox({
+    touchNavigation: true,
+    loop: true,
+    autoplayVideos: true
+  });
+
+  // Update year in footer
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
